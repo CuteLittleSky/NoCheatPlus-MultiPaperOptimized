@@ -29,10 +29,10 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Archive artifacts
-        uses: actions/upload-artifact@v2
-        if: success()
-        with:
-          name: Build
-          path: |-
-            build/libs/*.jar
-            target/*.jar
+      uses: actions/upload-artifact@v2
+      if: success()
+      with:
+        name: Build
+        path: |-
+          build/libs/*.jar
+          target/*.jar
